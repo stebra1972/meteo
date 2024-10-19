@@ -1,13 +1,30 @@
-<!-- index.html -->
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library</title>
+    <title>Richiesta dati</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
-    
+    <form onsubmit="return validateForm()">
+        <label for="email">E-MAIL:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="country">PAESE:</label>
+        <input type="text" id="country" name="country" required><br><br>
+
+        <label for="cap">CAP:</label>
+        <input type="text" id="cap" name="cap" required><br><br>
+
+        <label for="password">PASSWORD:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <label for="confirm_password">CONFERMA PASSWORD:</label>
+        <input type="password" id="confirm_password" name="confirm_password" required><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
 </html>
