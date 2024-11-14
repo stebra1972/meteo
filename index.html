@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giphy API Example</title>
 </head>
 <body>
-  <img src="#">
-  <script>
-    const img = document.querySelector('img');
-    fetch('https://api.giphy.com/v1/gifs/translate?api_key=fB9qQ1uAxdBP1mp6Sjk7CtEUaHjlRCFG&s=cats', {mode: 'cors'})
-      .then(function(response) {
-        return response.json();
-      })
-      .then(function(response) {
-        img.src = response.data.images.original.url;
-      });
-  </script>
-  
-  
+    <img src="" alt="Random Gif">
+    <button id="refreshButton">Carica nuova immagine</button>
+
+    <script>
+        const img = document.querySelector('img');
+        const refreshButton = document.getElementById('refreshButton');
+
+        function fetchGif() {
+            fetch('https://api.giphy.com/v1/gifs/translate?api_key=fB9qQ1uAxdBP1mp6Sjk7CtEUaHjlRCFG&s=dogs', {mode: 'cors'})
+                .then(function(response) {
+                    return response.json();
+                })
+                .then(function(response) {
+                    img.src = response.data.images.original.url;
+                });
+        }
+
+        refreshButton.addEventListener('click', function() {
+            location.reload();
+        });
+
+        fetchGif();
+    </script>
 </body>
 </html>
