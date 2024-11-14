@@ -1,30 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Richiesta dati</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+  <meta charset="UTF-8">
+  <title>Document</title>
 </head>
 <body>
-    <form onsubmit="return validateForm()">
-        <label for="email">E-MAIL:</label>
-        <input type="email" id="email" name="email" required><br><br>
-
-        <label for="country">PAESE:</label>
-        <input type="text" id="country" name="country" required><br><br>
-
-        <label for="cap">CAP:</label>
-        <input type="text" id="cap" name="cap" required><br><br>
-
-        <label for="password">PASSWORD:</label>
-        <input type="password" id="password" name="password" required><br><br>
-
-        <label for="confirm_password">CONFERMA PASSWORD:</label>
-        <input type="password" id="confirm_password" name="confirm_password" required><br><br>
-
-        <input type="submit" value="Submit">
-    </form>
+  <img src="#">
+  <script>
+    const img = document.querySelector('img');
+    fetch('https://api.giphy.com/v1/gifs/translate?api_key=fB9qQ1uAxdBP1mp6Sjk7CtEUaHjlRCFG&s=cats', {mode: 'cors'})
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(response) {
+        img.src = response.data.images.original.url;
+      });
+  </script>
+  
+  
 </body>
 </html>
