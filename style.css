@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+#location {
+    padding: 10px;
+    font-size: 16px;
+}
+
+#refresh {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+#weather {
+    margin-top: 20px;
+    font-size: 18px;
+}
