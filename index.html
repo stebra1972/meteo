@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <input type="text" id="location" placeholder="Enter location">
-        <button id="refresh">Refresh</button>
+        <input type="text" id="location" placeholder="Inserisci qui la località">
+        <button id="refresh">Premi per vedere il meteo</button>
         <div id="weather"></div>
+        <div id="loading" class="hidden">Loading...</div>
     </div>
     <script src="script.js"></script>
 </body>
