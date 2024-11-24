@@ -1,3 +1,5 @@
+
+
 document.getElementById('refresh').addEventListener('click', () => {
     const location = document.getElementById('location').value;
     if (location) {
@@ -38,12 +40,18 @@ function fetchWeather(location) {
 function updateBackground(conditions) {
     const body = document.body;
     if (conditions.toLowerCase().includes('sun')) {
-        body.style.backgroundImage = "./images('sun.jpg')";
-    } else if (conditions.toLowerCase().includes('cloud')) {
-        body.style.backgroundImage = "./images('cloud.jpg')";
+        body.style.backgroundImage = "url('Images/sun.jpeg')";
+    } else if (conditions.toLowerCase().includes('cloudy')) {
+        body.style.backgroundImage = "url('Images/cloud.jpeg')";
     } else if (conditions.toLowerCase().includes('rain')) {
-        body.style.backgroundImage = "./images('rain.jpg')";
+        body.style.backgroundImage = "url('Images/rain.jpeg')";
+    } else if (conditions.toLowerCase().includes('clear')) {
+        body.style.backgroundImage = "url('Images/sun.jpeg')";
+    } else if (conditions.toLowerCase().includes('overcast')) {
+        body.style.backgroundImage = "url('Images/cloud.jpeg')";
+
     } else {
         body.style.backgroundImage = "";
     }
 }
+
