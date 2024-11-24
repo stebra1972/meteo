@@ -24,9 +24,10 @@ function fetchWeather(location) {
         .then(data => {
             loadingDiv.classList.add('hidden');
             weatherDiv.innerHTML = `
-                <h2>Weather in ${data.resolvedAddress}</h2>
-                <p>Temperature: ${(((data.currentConditions.temp)-32)*5/9).toFixed(1)} °C </p>
-                <p>Conditions: ${data.currentConditions.conditions}</p>
+                <h2>Il meteo a: ${data.resolvedAddress}</h2>
+                <p>Temperatura: ${(((data.currentConditions.temp)-32)*5/9).toFixed(1)} °C </p>
+                <p>Temperature: ${data.currentConditions.temp.toFixed(1)} °F </p>
+                <p>Condizioni del cielo: ${data.currentConditions.conditions}</p>
             `;
             updateBackground(data.currentConditions.conditions);
         })
